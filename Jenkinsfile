@@ -8,7 +8,7 @@ pipeline {
     	}
         stage('build') {
             steps {
-                bat 'mvnw package'
+                bat 'mvn package'
             }
         }
         stage('finish') {
