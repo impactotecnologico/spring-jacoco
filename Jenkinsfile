@@ -13,7 +13,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                bat 'mvn package –DskipTests'
+                bat 'mvn package -DskipTest'
             }
         }
         stage('finish') {
