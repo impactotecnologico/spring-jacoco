@@ -8,7 +8,7 @@ pipeline {
     	}
         stage('build') {
             steps {
-                sh './mvnw package'
+                mvn package
             }
         }
         stage('finish') {
