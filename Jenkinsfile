@@ -6,9 +6,14 @@ pipeline {
     			echo 'Hola mundo'
     		}
     	}
+        stage('test') {
+            steps {
+                bat 'mvn test'
+            }
+        }
         stage('build') {
             steps {
-                bat 'mvn package'
+                bat 'mvn package –DskipTests'
             }
         }
         stage('finish') {
